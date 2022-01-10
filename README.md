@@ -17,8 +17,8 @@ Design patterns covered so far:
 - [ ] Abstract Factory
 
 Primary references for design patterns:
-- [Gang of Four](https://en.wikipedia.org/wiki/Gang_of_Four_%28book_series%29)
-- [GoF in Action](http://www.javaworld.com/article/2073352/core-java/the-gang-of-four-design-patterns.html)
+- [Gang of Four](https://en.wikipedia.org/wiki/Design_Patterns)
+- [GoF in Action](https://www.infoworld.com/uk/blog/java-design-patterns/)
 - [Refactoring Guru](https://refactoring.guru/design-patterns/creational-patterns)
 
 Additional reading list:
