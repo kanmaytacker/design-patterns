@@ -13,7 +13,7 @@ Design patterns covered so far:
 - [x] Singleton
 - [x] Builder
 - [x] Prototype
-- [ ] Factory
+- [x] Factory
 - [ ] Abstract Factory
 
 Primary references for design patterns:
@@ -29,16 +29,27 @@ Additional reading list:
 - [Builder isomorphisms](https://blog.ploeh.dk/2020/02/10/builder-isomorphisms/)
 - [Cloning in Java](https://medium.com/@ganeshraj020794/cloning-in-java-shallow-vs-deep-vs-lazy-and-a-small-hack-to-clone-java-objects-204bdba0f3f8)
 
+Design patterns in other languages:
+- [Design Patterns in Python - I](https://python-patterns.guide/)
+- [Design Patterns in Python - II](https://github.com/faif/python-patterns)
+- [Design Patterns in JavaScript - I](https://www.dofactory.com/javascript/design-patterns)
+- [Design Patterns in JavaScript - II](https://www.patterns.dev/posts/classic-design-patterns/)
+- [Design Patterns in JavaScript - III](https://github.com/fbeline/design-patterns-JS)
+- [Cloning in Java](https://medium.com/@ganeshraj020794/cloning-in-java-shallow-vs-deep-vs-lazy-and-a-small-hack-to-clone-java-objects-204bdba0f3f8)
+
 ## Structural Design Patterns
 
 Design patterns covered so far:
-- [ ] Adapter
+- [x] Adapter
+- [ ] Decorator
 - [ ] Bridge
 - [ ] Composite
-- [ ] Decorator
 - [ ] Facade
 - [ ] Flyweight
 - [ ] Proxy
+
+Additional reading list:
+- [Adapter Pattern](https://qbalsdon.github.io/patterns/programming/adapter/android/kotlin/focus/2020/11/19/adapter-pattern.html)
 
 ## Behavioural Design Patterns
 
