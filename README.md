@@ -35,7 +35,6 @@ Design patterns in other languages:
 - [Design Patterns in JavaScript - I](https://www.dofactory.com/javascript/design-patterns)
 - [Design Patterns in JavaScript - II](https://www.patterns.dev/posts/classic-design-patterns/)
 - [Design Patterns in JavaScript - III](https://github.com/fbeline/design-patterns-JS)
-- [Cloning in Java](https://medium.com/@ganeshraj020794/cloning-in-java-shallow-vs-deep-vs-lazy-and-a-small-hack-to-clone-java-objects-204bdba0f3f8)
 
 ## Structural Design Patterns
 
