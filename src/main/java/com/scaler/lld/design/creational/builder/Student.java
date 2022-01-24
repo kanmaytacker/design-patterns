@@ -1,6 +1,5 @@
 package com.scaler.lld.design.creational.builder;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import lombok.AllArgsConstructor;

@@ -3,10 +3,6 @@ package com.scaler.lld.design.structural.adapter;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import com.scaler.lld.design.structural.adapter.PaymentProviderInterface;
-import com.scaler.lld.design.structural.adapter.PaymentStatus;
-import com.scaler.lld.design.structural.adapter.RazorPayProvider;
-
 import org.junit.Before;
 import org.junit.Test;
 

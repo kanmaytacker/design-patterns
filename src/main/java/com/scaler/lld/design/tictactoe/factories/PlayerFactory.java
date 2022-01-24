@@ -2,7 +2,6 @@ package com.scaler.lld.design.tictactoe.factories;
 
 import com.scaler.lld.design.tictactoe.models.Bot;
 import com.scaler.lld.design.tictactoe.models.HumanPlayer;
-import com.scaler.lld.design.tictactoe.models.Player;
 
 public class PlayerFactory {
     

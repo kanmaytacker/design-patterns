@@ -2,16 +2,12 @@ package com.scaler.lld.design.tictactoe;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Collections;
 import java.util.List;
 
 import com.scaler.lld.design.tictactoe.factories.PlayerFactory;
-import com.scaler.lld.design.tictactoe.models.Board;
 import com.scaler.lld.design.tictactoe.models.BoardCell;
-import com.scaler.lld.design.tictactoe.models.Bot;
 import com.scaler.lld.design.tictactoe.models.Game;
 import com.scaler.lld.design.tictactoe.models.GameSymbol;
-import com.scaler.lld.design.tictactoe.models.HumanPlayer;
 import com.scaler.lld.design.tictactoe.models.User;
 import com.scaler.lld.design.tictactoe.strategies.DefaultPlayingStrategy;
 

@@ -1,6 +1,5 @@
 package com.scaler.lld.design.behavioural.strategy;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;

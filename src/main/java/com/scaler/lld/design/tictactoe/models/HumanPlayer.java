@@ -6,7 +6,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder(toBuilder = true)
 public class HumanPlayer extends Player {
     
-    private String userId;
+    private User user;
 
     @Override
     public BoardCell move(Board board) {
