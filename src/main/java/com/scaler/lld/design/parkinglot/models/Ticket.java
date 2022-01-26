@@ -1,7 +1,6 @@
 package com.scaler.lld.design.parkinglot.models;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 import lombok.Builder;
 import lombok.Getter;
