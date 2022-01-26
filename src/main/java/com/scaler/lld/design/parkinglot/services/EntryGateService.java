@@ -40,3 +40,6 @@ public class EntryGateService {
 // 1b. Update the status of the slot
 // 2. Create a ticket
 // 3. Persist/ save the ticket
+
+// DB - models
+// Outer world - FE, Client - DTO - Request, Response
