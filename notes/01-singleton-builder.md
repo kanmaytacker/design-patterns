@@ -1,4 +1,22 @@
-# Creational Design patterns - Singleton and Builder
+# Creational Design patterns - Singleton and Builder- [Creational Design patterns - Singleton and Builder](#creational-design-patterns---singleton-and-builder)
+  - [Key terms](#key-terms)
+    - [Design patterns](#design-patterns)
+    - [Creational design patterns](#creational-design-patterns)
+    - [Singleton](#singleton)
+    - [Builder](#builder)
+  - [Singleton](#singleton-1)
+    - [Problem](#problem)
+    - [Solution](#solution)
+    - [Simple singleton](#simple-singleton)
+    - [Thread-safe singleton](#thread-safe-singleton)
+    - [Double-checked locking](#double-checked-locking)
+    - [Summary](#summary)
+  - [Builder](#builder-1)
+    - [Problems](#problems)
+    - [Constructor with a hash map](#constructor-with-a-hash-map)
+    - [Inner class](#inner-class)
+    - [Summary](#summary-1)
+  - [Reading list](#reading-list)
 ## Key terms
 ### Design patterns
 > A design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design. Design patterns are formalized best practices that the programmer can use to solve common problems when designing an application or system.
