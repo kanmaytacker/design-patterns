@@ -1,4 +1,6 @@
-# Creational Design patterns - Singleton and Builder- [Creational Design patterns - Singleton and Builder](#creational-design-patterns---singleton-and-builder)
+# Creational design patterns - Singleton and Builder
+
+- [Creational design patterns - Singleton and Builder](#creational-design-patterns---singleton-and-builder)
   - [Key terms](#key-terms)
     - [Design patterns](#design-patterns)
     - [Creational design patterns](#creational-design-patterns)
@@ -17,6 +19,7 @@
     - [Inner class](#inner-class)
     - [Summary](#summary-1)
   - [Reading list](#reading-list)
+
 ## Key terms
 ### Design patterns
 > A design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design. Design patterns are formalized best practices that the programmer can use to solve common problems when designing an application or system.
@@ -263,4 +266,4 @@ Database database = new Database.DatabaseBuilder()
 
 ## Reading list
 * [Telescoping constructor anti-pattern](https://www.vojtechruzicka.com/avoid-telescoping-constructor-pattern/)
-* [Why objects should be immutable](https://octoperf.com/blog/2016/04/07/why-objects-must-be-immutable)
+* [Why objects should be immutable?](https://octoperf.com/blog/2016/04/07/why-objects-must-be-immutable)
