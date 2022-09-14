@@ -11,7 +11,7 @@
     - [Simple Factory](#simple-factory)
     - [Factory Method](#factory-method)
     - [Recap](#recap-1)
-  - [Design patters in different languages](#design-patters-in-different-languages)
+  - [Design patterns in different languages](#design-patterns-in-different-languages)
     - [Prototype](#prototype-2)
       - [Python](#python)
       - [Javascript](#javascript)
@@ -193,7 +193,7 @@ The complete steps to implement the factory method pattern are:
 * Simple factory - The factory class contains a static method for creating objects. This technique is easy to implement, but it is not extensible and reusable. It violates the open-closed principle and the single responsibility principle.
 * Factory method - The responsibility of creating the object is shifted to the child classes. The factory method is implemented in the base class and the child classes can override the factory method to create objects of their own type. This technique is extensible and reusable. It follows the open-closed principle and the single responsibility principle.
 
-## Design patters in different languages
+## Design patterns in different languages
 
 ### Prototype
 
