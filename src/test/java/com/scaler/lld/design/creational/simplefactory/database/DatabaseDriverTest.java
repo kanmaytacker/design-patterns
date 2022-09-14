@@ -1,4 +1,4 @@
-package com.scaler.lld.design.creational.simplefactory;
+package com.scaler.lld.design.creational.simplefactory.database;
 
 import static org.junit.Assert.assertTrue;
 

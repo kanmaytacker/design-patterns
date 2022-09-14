@@ -1,4 +1,4 @@
-package com.scaler.lld.design.creational.factory;
+package com.scaler.lld.design.creational.factory.database;
 
 public class MySqlDriver extends NewDatabaseDriver {
     
