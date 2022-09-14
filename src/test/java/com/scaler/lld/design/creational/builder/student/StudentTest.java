@@ -1,4 +1,4 @@
-package com.scaler.lld.design.creational.builder;
+package com.scaler.lld.design.creational.builder.student;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Test;
+
+import com.scaler.lld.design.creational.builder.student.NewStudent;
+import com.scaler.lld.design.creational.builder.student.Student;
 
 public class StudentTest {
 

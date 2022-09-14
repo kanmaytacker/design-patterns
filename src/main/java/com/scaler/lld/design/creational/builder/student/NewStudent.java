@@ -1,9 +1,9 @@
-package com.scaler.lld.design.creational.builder;
+package com.scaler.lld.design.creational.builder.student;
 
 // Assignment - Figure out a way to avoid duplication and coupling in builder class
 public class NewStudent {
     
-    String fname;
+    public String fname;
     String lname;
     String email;
     String phone;

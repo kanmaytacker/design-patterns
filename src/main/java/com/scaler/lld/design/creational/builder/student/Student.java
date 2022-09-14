@@ -1,4 +1,4 @@
-package com.scaler.lld.design.creational.builder;
+package com.scaler.lld.design.creational.builder.student;
 
 import java.util.Map;
 

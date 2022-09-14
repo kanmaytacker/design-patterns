@@ -18,6 +18,7 @@ Design patterns covered so far:
 
 Lecture notes:
 - [Singleton and Builder](notes/01-singleton-builder.md)
+- [Prototype and Factory](notes/02-prototype-factory.md)
 
 Primary references for design patterns:
 - [Gang of Four](https://en.wikipedia.org/wiki/Design_Patterns)
