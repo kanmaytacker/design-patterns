@@ -1,4 +1,4 @@
-package com.scaler.lld.design.creational.prototype;
+package com.scaler.lld.design.creational.prototype.mlmodel;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

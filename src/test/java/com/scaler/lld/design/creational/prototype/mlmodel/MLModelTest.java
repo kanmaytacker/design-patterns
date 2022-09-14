@@ -1,9 +1,8 @@
-package com.scaler.lld.design.creational.prototype;
+package com.scaler.lld.design.creational.prototype.mlmodel;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +38,7 @@ public class MLModelTest {
         MLModel model = new MLModel(ModelType.LR, "description1", 0.7, 0.3, 0.1, 0.2);
         MLModel clonedModel = model.clone();
 
-        assertEquals("If name is set, it should be equal to LR", "LR", clonedModel.getType());
+        assertEquals("If name is set, it should be equal to LR", ModelType.LR, clonedModel.getType());
         assertFalse("If clone is called, a new copy should be returned", model == clonedModel);
     }
 
@@ -65,7 +64,7 @@ public class MLModelTest {
     }
 
     @Test
-    private void createUsingRegistry() {
+    public void createUsingRegistry() {
 
         // Create first prototype
         MLModel prototype1 = new MLModel(ModelType.LR, "description1", 0.7, 0.3, 0.1, 0.2);
