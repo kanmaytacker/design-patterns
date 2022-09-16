@@ -20,26 +20,27 @@ public class Database {
     
     // Step 2 - Create a static inner class with same fields as the outer class
     public static class DatabaseBuilder {
-        private String name;
-        private String host;
-        private int port;
-        private DatabaseType type;
+        Database database;
+
+        public DatabaseBuilder() {
+            database = new Database();
+        }
 
 
         // Step 3 - Create fluent interfaces for setter
         public DatabaseBuilder withName(String name) {
-            this.name = name;
+            database.name = name;
             return this;
         }
 
         public DatabaseBuilder withUrl(String host, int port) {
-            this.host = host;
-            this.port = port;
+            database.host = host;
+            database.port = port;
             return this;
         }
 
         public DatabaseBuilder mysql() {
-            this.type = DatabaseType.MYSQL;
+            database.type = DatabaseType.MYSQL;
             return this;
         }
 
@@ -50,17 +51,17 @@ public class Database {
                 throw new IllegalArgumentException("Invalid database configuration");
             }
 
-            Database database = new Database();
-            database.name = this.name;
-            database.host = this.host;
-            database.port = this.port;
-            database.type = this.type;
+            Database actualDatabase = new Database();
+            actualDatabase.name = database.name;
+            actualDatabase.host = database.host;
+            actualDatabase.port = database.port;
+            actualDatabase.type = database.type;
             return database;
         }
 
         // Step 5 - Add a validation method
         public Boolean isValid() {
-            if (this.name == null) {
+            if (database.name == null) {
                 return false;
             }
             return true;
