@@ -15,6 +15,21 @@
 * [Student builder - Test](https://github.com/kanmaytacker/design-patterns/blob/master/src/test/java/com/scaler/lld/design/creational/builder/student/StudentTest.java)
 * [Database builder - Test](https://github.com/kanmaytacker/design-patterns/blob/master/src/test/java/com/scaler/lld/design/creational/builder/database/DatabaseBuilderTest.java)
 
+### Prototype
+
+#### Game - Background and foreground objects
+* [Prototype - Game - Clonable Interface](main/java/com/scaler/lld/design/creational/prototype/game/GraphicalObject.java)
+* [Prototype - Game - Concrete class](main/java/com/scaler/lld/design/creational/prototype/game/BackgroundObject.java)
+* [Prototype - Game - Registry](main/java/com/scaler/lld/design/creational/prototype/game/BackgroundObjectRegistry.java)
+* [Test](test/java/com/scaler/lld/design/creational/prototype/game/GameObjectTest.java)
+
+
+#### Example - ML Model
+* [Prototype - ML Model - Clonable Interface](main/java/com/scaler/lld/design/creational/prototype/mlmodel/ObjectClonable.java)
+* [Prototype - ML Model - Concrete class](main/java/com/scaler/lld/design/creational/prototype/mlmodel/MLModel.java)
+* [Prototype - ML Model - Registry](main/java/com/scaler/lld/design/creational/prototype/mlmodel/ModelRegistry.java)
+* [Test](test/java/com/scaler/lld/design/creational/prototype/mlmodel/MLModelTest.java)
+
 ### Factory
 
 #### Simple Factory
