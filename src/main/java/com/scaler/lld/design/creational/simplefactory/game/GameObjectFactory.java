@@ -1,7 +1,6 @@
 package com.scaler.lld.design.creational.simplefactory.game;
 
 import com.scaler.lld.design.creational.prototype.game.BackgroundObject;
-import com.scaler.lld.design.creational.prototype.game.BackgroundObjectType;
 import com.scaler.lld.design.creational.prototype.game.ForegroundObject;
 import com.scaler.lld.design.creational.prototype.game.GameObjectType;
 import com.scaler.lld.design.creational.prototype.game.GraphicalObject;
