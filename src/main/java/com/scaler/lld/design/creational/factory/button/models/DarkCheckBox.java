@@ -1,6 +1,6 @@
 package com.scaler.lld.design.creational.factory.button.models;
 
-public class SolidCheckbox extends CheckBox {
+public class DarkCheckBox extends CheckBox {
 
     @Override
     public void render() {

@@ -1,6 +1,6 @@
 package com.scaler.lld.design.creational.factory.button.models;
 
-public class AnimatedCheckbox extends CheckBox {
+public class LightCheckBox extends CheckBox {
 
     @Override
     public void render() {
