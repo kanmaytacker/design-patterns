@@ -279,6 +279,7 @@ public class PayPalAdapter implements PaymentProvider {
         ... 
     }
 }
+```
 
 4. `Transform request and delegate to original class` - In the adapter class, transform the request to the format that the original class expects. Then, call the original class to perform the operation.
 ```java
