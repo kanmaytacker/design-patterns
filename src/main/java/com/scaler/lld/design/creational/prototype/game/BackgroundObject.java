@@ -5,11 +5,13 @@ import java.util.List;
 
 import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 // Step 2 - Create a concrete class
 @Getter
 @Setter
+@NoArgsConstructor
 public class BackgroundObject implements GraphicalObject {
     private Integer x;
     private Integer y;
