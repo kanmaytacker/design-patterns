@@ -1,7 +1,7 @@
 package com.scaler.lld.design.structural.adapter;
 
-import com.scaler.lld.design.structural.external.CashfreeApi;
-import com.scaler.lld.design.structural.external.CashfreeStatus;
+import com.scaler.lld.design.structural.adapter.external.CashfreeApi;
+import com.scaler.lld.design.structural.adapter.external.CashfreeStatus;
 
 public class CashFreePayProvider implements PaymentProviderInterface {
 

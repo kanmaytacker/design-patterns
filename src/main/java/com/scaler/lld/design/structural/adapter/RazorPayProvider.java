@@ -1,7 +1,7 @@
 package com.scaler.lld.design.structural.adapter;
 
-import com.scaler.lld.design.structural.external.RazorPayApi;
-import com.scaler.lld.design.structural.external.RazorPayStatus;
+import com.scaler.lld.design.structural.adapter.external.RazorPayApi;
+import com.scaler.lld.design.structural.adapter.external.RazorPayStatus;
 
 // Step 2 - Concrete adapters
 public class RazorPayProvider implements PaymentProviderInterface {
