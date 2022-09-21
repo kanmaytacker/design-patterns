@@ -1,10 +1,36 @@
 # Structural design patterns - Adapter and Flyweight
 
+- [Structural design patterns - Adapter and Flyweight](#structural-design-patterns---adapter-and-flyweight)
+  - [Key terms](#key-terms)
+    - [Structural Patterns](#structural-patterns)
+    - [Adapter](#adapter)
+    - [Flyweight](#flyweight)
+  - [Adapter](#adapter-1)
+    - [Problem](#problem)
+    - [Implementation](#implementation)
+    - [Advantages](#advantages)
+  - [Flyweight Pattern](#flyweight-pattern)
+    - [Implementation](#implementation-1)
+    - [Recap](#recap)
+  - [Design patterns in different languages](#design-patterns-in-different-languages)
+    - [Adapter](#adapter-2)
+      - [Python](#python)
+      - [JavaScript](#javascript)
+    - [Flyweight](#flyweight-1)
+      - [Python](#python-1)
+      - [JavaScript](#javascript-1)
+  
 ## Key terms
 ### Structural Patterns
 > Structural patterns are design patterns that ease the design by identifying a simple way to realize relationships between entities.
 
 > Structural patterns are concerned with how classes and objects are composed to form larger structures.
+
+### Adapter
+> The adapter pattern is a software design pattern (also known as wrapper, an alternative naming shared with the decorator pattern) that allows the interface of an existing class to be used from another interface. It is often used to make existing classes work with others without modifying their source code.
+
+### Flyweight
+> Flyweight is a structural design pattern that lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
 
 ## Adapter
 
