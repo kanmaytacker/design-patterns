@@ -10,4 +10,5 @@ import lombok.Getter;
 public class Bullet {
     private Double weight;
     private byte[] image;
+    private BulletType bulletType;
 }
