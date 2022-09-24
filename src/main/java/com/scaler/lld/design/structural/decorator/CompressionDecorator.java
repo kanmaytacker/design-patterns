@@ -1,11 +1,11 @@
 package com.scaler.lld.design.structural.decorator;
 
 // Step 1
-public class CompressionDataSource implements DataSource {
+public class CompressionDecorator implements DataSource {
 
     private DataSource dataSource;
 
-    public CompressionDataSource(DataSource dataSource) {
+    public CompressionDecorator(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -16,7 +16,7 @@ public class CompressionDataSource implements DataSource {
     }
 
     private String decompress(String value) {
-        return "Decompress";
+        return value + " - Decompress";
     }
 
     @Override

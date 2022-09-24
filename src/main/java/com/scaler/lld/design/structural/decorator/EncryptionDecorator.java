@@ -1,10 +1,10 @@
 package com.scaler.lld.design.structural.decorator;
 
-public class EncryptionDataSource implements DataSource {
+public class EncryptionDecorator implements DataSource {
 
     private DataSource dataSource;
 
-    public EncryptionDataSource(DataSource dataSource) {
+    public EncryptionDecorator(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -15,7 +15,7 @@ public class EncryptionDataSource implements DataSource {
     }
 
     private String decrypt(String value) {
-        return "Decrypted";
+        return value + " - Decrypted";
     }
 
     @Override

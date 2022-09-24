@@ -1,12 +1,12 @@
 package com.scaler.lld.design.structural.decorator;
 
 // Step 1 - Implement common interface
-public class BaseDataSource implements DataSource {
+public class BaseDecorator implements DataSource {
 
     // Step 2 - Accept current entity in constructor
     public DataSource dataSource;
 
-    public BaseDataSource(DataSource dataSource) {
+    public BaseDecorator(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -17,7 +17,7 @@ public class BaseDataSource implements DataSource {
 
     @Override
     public void write(String value) {
-        dataSource.write(value);        
+        dataSource.write(value);
     }
-    
+
 }

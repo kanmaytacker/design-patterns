@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class DatasourceDecoratorTest {
-    
+
     DataSource dataSource = null;
 
     @Before
@@ -22,11 +22,25 @@ public class DatasourceDecoratorTest {
 
     @Test
     public void testCompressionDecorator() {
-        DataSource compressedDataSource = new CompressionDataSource(dataSource);
-        DataSource encryptedDataSource = new EncryptionDataSource(dataSource);
-        assertEquals("If compressed data source is used, it should return Decompress", "Decrypted", encryptedDataSource.read());
+        DataSource compressedDataSource = new CompressionDecorator(dataSource);
+        assertEquals("If compressed data source is used, it should return Decompress", "Base - Decompress",
+                compressedDataSource.read());
 
     }
 
+    @Test
+    public void testEncryptionDecorator() {
+        DataSource encryptedDataSource = new EncryptionDecorator(dataSource);
+        assertEquals("If encrypted data source is used, it should return Encrypted", "Base - Encrypted",
+                encryptedDataSource.read());
+    }
+
+    @Test
+    public void testCompressionAndEncryptionDecorator() {
+        DataSource compressedDataSource = new CompressionDecorator(dataSource);
+        DataSource encryptedDataSource = new EncryptionDecorator(compressedDataSource);
+        assertEquals("If compressed and encrypted data source is used, it should return Encrypted - Decompress",
+                "Base - Encrypted - Decompress", encryptedDataSource.read());
+    }
 
 }
