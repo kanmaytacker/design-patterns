@@ -7,9 +7,6 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import com.scaler.lld.design.creational.builder.student.NewStudent;
-import com.scaler.lld.design.creational.builder.student.Student;
-
 public class StudentTest {
 
     @Test

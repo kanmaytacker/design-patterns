@@ -1,13 +1,11 @@
 package com.scaler.lld.design.snakesladder.commands;
 
-import java.util.List;
-
-public class CreateGame implements Command{
+public class CreateGame implements Command {
 
     @Override
     public void execute(String command) {
         // TODO Auto-generated method stub
-        
+
     }
 
     @Override
@@ -15,5 +13,5 @@ public class CreateGame implements Command{
         // TODO Auto-generated method stub
         return false;
     }
-    
+
 }

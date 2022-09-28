@@ -49,6 +49,7 @@ public class MLModelTest {
     }
 
     // Step 3 - Clone models using prototype
+    @Test
     private void testMultipleCopies() {
 
         MLModel prototype = new MLModel(ModelType.LR, "description1", 0.7, 0.3, 0.1, 0.2);
