@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+
+actor Student
+actor Instructor
+
+rectangle Scaler {
+    usecase "Join class" as Join
+    usecase "Schedule mentor session" as Schedule
+    usecase "Raise TA request" as Raise
+    usecase "Upload class notes" as Upload
+    usecase "Submit solution" as Submit
+
+    usecase "Join as Host" as Host
+    usecase "Join as Audience" as Audience
+    
+    (Host) .> (Join) : extends
+    (Audience) .> (Join) : extends
+
+    usecase "Check mentor availability" as Check
+    (Schedule) .> (Check) : includes
+
+
+
+}
+
+Student --> Join
+Student --> Schedule
+Student --> Raise
+Student --> Submit
+
+Instructor --> Join
+Instructor --> Submit
+Instructor --> Upload
+@enduml
