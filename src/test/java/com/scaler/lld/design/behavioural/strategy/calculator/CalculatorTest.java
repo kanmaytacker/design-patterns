@@ -1,4 +1,4 @@
-package com.scaler.lld.design.behavioural.strategy;
+package com.scaler.lld.design.behavioural.strategy.calculator;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,7 +16,7 @@ public class CalculatorTest {
 
     @Test
     public void testAddition() {
-        
+
         int a = 10;
         int b = 2;
 
@@ -28,7 +28,7 @@ public class CalculatorTest {
 
     @Test
     public void testSubtraction() {
-        
+
         int a = 10;
         int b = 2;
 

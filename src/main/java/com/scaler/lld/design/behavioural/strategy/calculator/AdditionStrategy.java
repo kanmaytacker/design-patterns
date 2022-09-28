@@ -1,4 +1,4 @@
-package com.scaler.lld.design.behavioural.strategy;
+package com.scaler.lld.design.behavioural.strategy.calculator;
 
 // Step 2 - Adding concrete strategies
 public class AdditionStrategy implements OperationStrategy {

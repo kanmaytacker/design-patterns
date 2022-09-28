@@ -1,4 +1,4 @@
-package com.scaler.lld.design.behavioural.strategy;
+package com.scaler.lld.design.behavioural.strategy.calculator;
 
 public class SubtractionStrategy implements OperationStrategy {
 
