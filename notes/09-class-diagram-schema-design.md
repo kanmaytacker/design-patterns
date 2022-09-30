@@ -1,5 +1,30 @@
 # Class diagram and schema design
 
+- [Class diagram and schema design](#class-diagram-and-schema-design)
+  - [Key terms](#key-terms)
+    - [Class diagram](#class-diagram)
+  - [Class diagram](#class-diagram-1)
+    - [Entities and attributes](#entities-and-attributes)
+      - [Attributes](#attributes)
+      - [Methods](#methods)
+      - [Interfaces and abstract classes](#interfaces-and-abstract-classes)
+    - [Relationships](#relationships)
+      - [Cardinality](#cardinality)
+  - [Schema Design - Case Study](#schema-design---case-study)
+    - [ReScaler - Case Study](#rescaler---case-study)
+    - [Class Diagram](#class-diagram-2)
+    - [Database Schema](#database-schema)
+    - [Adding a new feature](#adding-a-new-feature)
+      - [Course Name as an attribute](#course-name-as-an-attribute)
+      - [Course as a separate entity](#course-as-a-separate-entity)
+    - [Cardinality - Caveats](#cardinality---caveats)
+      - [Caveat 1: NULL values](#caveat-1-null-values)
+      - [Caveat 2: Relations with attributes](#caveat-2-relations-with-attributes)
+      - [Recap](#recap)
+    - [Adding a new feature - II](#adding-a-new-feature---ii)
+  - [Recap](#recap-1)
+  - [Take Home Exercise](#take-home-exercise)
+  
 ## Key terms
 ### Class diagram
 > A class diagram in the Unified Modeling Language (UML) is a type of static structure diagram that describes the structure of a system by showing the system's classes, their attributes, operations (or methods), and the relationships among objects.
