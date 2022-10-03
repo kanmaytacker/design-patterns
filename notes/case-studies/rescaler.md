@@ -10,3 +10,6 @@ Following are the requirements of the ReScaler application:
 * We will provide multiple courses as a part of the ReScaler application.
 * Every student can enroll for a single course.
 * Every course has a name.
+
+## Version 3
+* Each student can enroll for **exactly 4** courses

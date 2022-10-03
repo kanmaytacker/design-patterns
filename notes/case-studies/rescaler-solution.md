@@ -34,6 +34,7 @@ erDiagram
         string password
     }
 ```
+---
 
 ## Version 2
 
@@ -118,3 +119,108 @@ erDiagram
 
     STUDENT ||--o{ COURSE : "enrolled in"
 ```
+
+---
+
+## Version 3
+* Each student can enroll for **exactly 4** courses
+
+### Solution 1 - Multiple course ID columns
+
+#### Class Diagram
+
+```mermaid
+classDiagram
+    class Student {
+        -String name
+        -String email
+        -String phone
+        -String password
+        -Course[] courses
+        +getName() String
+        +getEmail() String
+        +getPhone() String
+        }
+
+    class Course {
+        -String name
+        }
+    
+    Student "*" --o "*" Course : Enrolled in
+```
+
+#### Database Schema
+
+```mermaid
+erDiagram
+    STUDENT {
+        int id PK
+        string email
+        string name
+        string phone
+        string password
+        int courseId1 FK
+        int courseId2 FK
+        int courseId3 FK
+        int courseId4 FK
+    }
+    COURSE {
+        int id PK
+        string name
+    }
+
+    STUDENT ||--o{ COURSE : "enrolled in"
+```
+
+Disadvantages:
+* `Extensibility` - The student can enroll for only 4 courses.
+* `Querying` - We need to write a query to get all the course columns for a student to identify the courses they are enrolled in.
+
+### Solution 2 - Separate table for student-course mapping
+
+#### Class Diagram
+
+```mermaid
+classDiagram
+    class Student {
+        -String name
+        -String email
+        -String phone
+        -String password
+        -Course[] courses
+        +getName() String
+        +getEmail() String
+        +getPhone() String
+        }
+
+    class Course {
+        -String name
+        }
+    
+    Student "*" --o "*" Course : Enrolled in
+```
+
+#### Database Schema
+
+```mermaid
+erDiagram
+    STUDENT {
+        int id PK
+        string email
+        string name
+        string phone
+        string password
+    }
+    COURSE {
+        int id PK
+        string name
+    }
+    STUDENT_COURSE {
+        int studentId FK
+        int courseId FK
+    }
+
+    STUDENT ||--|{ STUDENT_COURSE : "enrolled in"
+    COURSE ||--|{ STUDENT_COURSE : "has"
+```
+
