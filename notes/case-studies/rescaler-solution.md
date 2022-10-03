@@ -224,3 +224,80 @@ erDiagram
     COURSE ||--|{ STUDENT_COURSE : "has"
 ```
 
+## Version 4
+
+* ReScaler will provide different modules for students to learn i.e. Data Structures, Algorithms, etc.
+* Each student can enroll for multiple modules.
+* Each module will have multiple exams.
+* Each exam has a name and a duration.
+* One exam can be part of multiple modules.
+* For each exam, the student will be given a score.
+
+### Solution
+
+#### Class Diagram
+
+```mermaid
+classDiagram
+    class Student {
+        -String name
+        -String email
+        -String phone
+        -String password
+        -Module[] modules
+        +getName() String
+        +getEmail() String
+        +getPhone() String
+        }
+
+    class Module {
+        -String name
+        -Exam[] exams
+        }
+
+    class Exam {
+        -String name
+        -int duration
+        }
+
+    Student "*" --o "*" Module : Enrolled in
+    Module "*" --o "*" Exam : Has
+```
+
+#### Database Schema
+
+##### Just tables
+```mermaid
+erDiagram
+    STUDENT {
+        int id PK
+        string email
+        string name
+        string phone
+        string password
+    }
+    MODULE {
+        int id PK
+        string name
+    }
+    EXAM {
+        int id PK
+        string name
+        int duration
+    }
+    STUDENT_MODULE {
+        int studentId FK
+        int moduleId FK
+    }
+    MODULE_EXAM {
+        int moduleId FK
+        int examId FK
+        Date date
+    }
+    STUDENT_MODULE_EXAM {
+        int studentId FK
+        int moduleId FK
+        int examId FK
+        int score
+    }
+```

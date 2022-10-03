@@ -13,3 +13,12 @@ Following are the requirements of the ReScaler application:
 
 ## Version 3
 * Each student can enroll for **exactly 4** courses
+
+## Version 4
+
+* ReScaler will provide different modules for students to learn i.e. Data Structures, Algorithms, etc.
+* Each student can enroll for multiple modules.
+* Each module will have multiple exams.
+* Each exam has a name and a duration.
+* One exam can be part of multiple modules.
+* For each exam, the student will be given a score.
