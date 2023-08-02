@@ -107,3 +107,17 @@ public class Singleton {
 - [ ] Builder
 ---
 
+## Answers
+1. Singleton (C)
+2. Lazy initialization (A)
+3. It is not thread-safe (B)
+4. Eager initialization (B)
+5. It does not allow dynamic initialization i.e. pass arguments to the constructor (D)
+6. It is not performant (A)
+7. Use double-checked locking (B)
+8. Builder (B)
+9. Adapter (C)
+10. Decorator (B)
+---
+
+
