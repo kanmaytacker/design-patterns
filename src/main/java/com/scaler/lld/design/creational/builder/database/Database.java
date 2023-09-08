@@ -22,15 +22,15 @@ public class Database {
 
     // Add a static method to get the builder object
     public static DatabaseBuilder builder() {
-        return new DatabaseBuilder(new Database());
+        return new DatabaseBuilder();
     }
 
     // Step 2 - Create a static inner class with same fields as the outer class
     public static class DatabaseBuilder {
         private Database database;
 
-        DatabaseBuilder(Database database) {
-            this.database = database;
+        DatabaseBuilder() {
+            this.database = new Database();
         }
 
         // Step 3 - Create fluent interfaces for setter
