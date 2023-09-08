@@ -1,6 +1,7 @@
 package com.scaler.lld.design.tictactoe;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
@@ -11,14 +12,13 @@ import com.scaler.lld.design.tictactoe.models.GameSymbol;
 import com.scaler.lld.design.tictactoe.models.User;
 import com.scaler.lld.design.tictactoe.strategies.DefaultPlayingStrategy;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TicTacToeTest {
 
     private Game game;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         this.game = createGame();
     }
@@ -46,10 +46,10 @@ public class TicTacToeTest {
     public void testDimensions() {
        
         List<List<BoardCell>> cells = game.getBoard().getCells();
-        assertEquals("If board is created, number of rows should be equal to input", 3, cells.size());        
+        assertEquals(3, cells.size(), "If board is created, number of rows should be equal to input");
 
         List<BoardCell> firstRow = cells.get(0);
-        assertEquals("If board is created, number of columns should be equal to input", 3, firstRow.size());        
+        assertEquals(3, firstRow.size(), "If board is created, number of columns should be equal to input");
 
     }
 }

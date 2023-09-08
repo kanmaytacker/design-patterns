@@ -1,15 +1,15 @@
 package com.scaler.lld.design.behavioural.strategy.calculator;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTest {
 
     Calculator calculator = null;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         calculator = new Calculator();
     }

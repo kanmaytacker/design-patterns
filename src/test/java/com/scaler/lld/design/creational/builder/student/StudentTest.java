@@ -1,11 +1,13 @@
 package com.scaler.lld.design.creational.builder.student;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Test;
 
 public class StudentTest {
 
@@ -25,7 +27,7 @@ public class StudentTest {
             e.printStackTrace();
         }
 
-        assertEquals("If name is set, on fetching it should be the same", "John", student.getFname());
+        assertEquals("John", student.getFname(), "If name is set, on fetching it should be the same");
 
     }
 
@@ -38,16 +40,17 @@ public class StudentTest {
                 .setPhone("")
                 .setAddress("");
         NewStudent student = builder.build();
-        assertEquals("If name is set, on fetching it should be the same", "John", student.fname);
+        assertEquals("John", student.fname, "If name is set, on fetching it should be the same");
 
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testValidStudent() {
         NewStudent.NewStudentBuilder builder = new NewStudent.NewStudentBuilder();
         builder.setEmail("")
                 .setPhone("")
                 .setAddress("");
-        builder.build();
+        assertThrows(IllegalArgumentException.class, builder::build);
+
     }
 }

@@ -1,8 +1,10 @@
 package com.scaler.lld.design.creational.singleton;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DatabaseConnectionTest {
     
@@ -12,6 +14,6 @@ public class DatabaseConnectionTest {
         ConnectionPool pool = ConnectionPool.getInstance();
         ConnectionPool pool2 = ConnectionPool.getInstance();
 
-        assertTrue("If a new instance is created, it should be the same as the older one", pool == pool2);
+        assertTrue(pool == pool2, "If a new instance is created, it should be the same as the older one");
     }
 }

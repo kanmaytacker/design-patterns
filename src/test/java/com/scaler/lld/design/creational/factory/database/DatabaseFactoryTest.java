@@ -1,15 +1,15 @@
 package com.scaler.lld.design.creational.factory.database;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class DatabaseFactoryTest {
     
     public NewDatabaseDriver driverFactory = null;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         driverFactory = new MySqlDriver();
     }

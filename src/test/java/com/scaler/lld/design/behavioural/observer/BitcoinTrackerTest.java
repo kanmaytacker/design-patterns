@@ -1,14 +1,14 @@
 package com.scaler.lld.design.behavioural.observer;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BitcoinTrackerTest {
     private BitcoinTracker tracker;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         tracker = new BitcoinTracker();
         EmailNotifier emailNotifier = new EmailNotifier();

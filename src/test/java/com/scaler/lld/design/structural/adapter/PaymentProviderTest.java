@@ -1,23 +1,24 @@
 package com.scaler.lld.design.structural.adapter;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class PaymentProviderTest {
     
     PaymentProviderInterface paymentProvider = null;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         paymentProvider = new RazorPayProvider();
     }
 
     @Test
     public void testRazorPay() {
-        assertTrue("If razor pay is used, then instance should be of RazorPay", paymentProvider instanceof RazorPayProvider);
+        assertTrue(paymentProvider instanceof RazorPayProvider, "If razor pay is used, then instance should be of RazorPay");
         String link = paymentProvider.generateLink();
         assertEquals("RazorPay", link);
     }

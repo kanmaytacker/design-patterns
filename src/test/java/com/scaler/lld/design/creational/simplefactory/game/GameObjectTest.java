@@ -1,9 +1,11 @@
 package com.scaler.lld.design.creational.simplefactory.game;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 import com.scaler.lld.design.creational.prototype.game.BackgroundObject;
 import com.scaler.lld.design.creational.prototype.game.ForegroundObject;
@@ -15,11 +17,11 @@ public class GameObjectTest {
     @Test
     public void testSimpleFactory() {
         GraphicalObject foregroundObject = GameObjectFactory.createGameObject(GameObjectType.FOREGROUND);
-        assertNotNull("If the simple factory method is called, the object should not be null", foregroundObject);
-        assertTrue("If the type is FOREGROUND, the object should be of type ForegroundObject", foregroundObject instanceof ForegroundObject);
+        assertNotNull(foregroundObject);
+        assertTrue(foregroundObject instanceof ForegroundObject);
 
         GraphicalObject backgroundObject = GameObjectFactory.createGameObject(GameObjectType.BACKGROUND);
-        assertNotNull("If the simple factory method is called, the object should not be null", backgroundObject);
-        assertTrue("If the type is BACKGROUND, the object should be of type BackgroundObject", backgroundObject instanceof BackgroundObject);
+        assertNotNull(backgroundObject);
+        assertTrue(backgroundObject instanceof BackgroundObject);
     }
 }

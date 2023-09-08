@@ -1,20 +1,19 @@
 package com.scaler.lld.design.creational.prototype.mlmodel;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class MLModelTest {
 
     private ModelRegistry registry = null;
 
-    @Before
+    @BeforeEach
     public void setUp() {
 
         registry = new ModelRegistry();
@@ -29,7 +28,7 @@ public class MLModelTest {
     @Test
     public void testModelCreation() {
         MLModel model = new MLModel(ModelType.LR, "description1", 0.7, 0.3, 0.1, 0.2);
-        assertEquals("If name is set, it should be equal to LR", "LR", model.getType().name());
+        assertEquals("LR", model.getType().name(), "If name is set, it should be equal to LR");
     }
 
     @Test
@@ -38,14 +37,14 @@ public class MLModelTest {
         MLModel model = new MLModel(ModelType.LR, "description1", 0.7, 0.3, 0.1, 0.2);
         MLModel clonedModel = model.clone();
 
-        assertEquals("If name is set, it should be equal to LR", ModelType.LR, clonedModel.getType());
-        assertFalse("If clone is called, a new copy should be returned", model == clonedModel);
+        assertEquals(ModelType.LR, clonedModel.getType(), "If name is set, it should be equal to LR");
+        assertFalse(model == clonedModel, "If clone is called, a new copy should be returned");
     }
 
     @Test
     public void testRegistry() {
         MLModel model = registry.getModel(ModelType.LR);
-        assertNotNull("If model is populated, it should not be null", model);
+        assertNotNull(model, "If model is populated, it should not be null");
     }
 
     // Step 3 - Clone models using prototype

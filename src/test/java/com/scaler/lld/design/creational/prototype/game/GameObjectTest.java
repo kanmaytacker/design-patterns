@@ -1,9 +1,11 @@
 package com.scaler.lld.design.creational.prototype.game;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 
 public class GameObjectTest {
 
@@ -13,8 +15,8 @@ public class GameObjectTest {
         BackgroundObject prototype = new BackgroundObject(100, 200, 100, 200, BackgroundObjectType.TREE);
         BackgroundObject clone = prototype.clone();
 
-        assertNotNull("If clone method is called, it should return a new object", clone);
-        assertEquals("If clone method is called, it should return same value for x", prototype.getX(), clone.getX());
+        assertNotNull(clone, "If clone method is called, it should return a new object");
+        assertEquals(prototype.getX(), clone.getX(), "If clone method is called, it should return same value for x");
 
         clone.setX(200);
         clone.setY(300);
@@ -32,8 +34,8 @@ public class GameObjectTest {
 
         BackgroundObject clone = registry.getObject(BackgroundObjectType.TREE).clone();
 
-        assertNotNull("If clone method is called, it should return a new object", clone);
-        assertEquals("If clone method is called, it should return same value for x", prototype.getX(), clone.getX());
+        assertNotNull(clone, "If clone method is called, it should return a new object");
+        assertEquals(prototype.getX(), clone.getX(), "If clone method is called, it should return same value for x");
 
         clone.setX(200);
         clone.setY(300);
