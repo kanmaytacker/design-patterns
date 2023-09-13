@@ -1,4 +1,4 @@
-package com.scaler.lld.design.structural.decorator;
+package com.scaler.lld.design.structural.decorator.database;
 
 // Step 4 - Create concrete decorators
 public class EncryptionDecorator extends BaseDecorator {

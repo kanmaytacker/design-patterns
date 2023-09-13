@@ -1,4 +1,4 @@
-package com.scaler.lld.design.structural.decorator;
+package com.scaler.lld.design.structural.decorator.database;
 
 // Step 2 - Concrete product class
 public class FileDatasource implements Datasource {

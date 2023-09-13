@@ -1,4 +1,4 @@
-package com.scaler.lld.design.structural.decorator;
+package com.scaler.lld.design.structural.decorator.database;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,7 +32,7 @@ public class DatasourceDecoratorTest {
     @Test
     public void testEncryptionDecorator() {
         Datasource encryptedDataSource = new EncryptionDecorator(dataSource);
-        assertEquals( "Base - Decrypted",
+        assertEquals("Base - Decrypted",
                 encryptedDataSource.read(), "If encrypted data source is used, it should return Encrypted");
     }
 

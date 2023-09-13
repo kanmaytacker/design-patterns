@@ -1,4 +1,4 @@
-package com.scaler.lld.design.structural.decorator;
+package com.scaler.lld.design.structural.decorator.database;
 
 public class CompressionDecorator extends BaseDecorator {
 
