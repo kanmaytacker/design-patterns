@@ -1,8 +1,8 @@
 package com.scaler.lld.design.structural.decorator;
 
-public interface DataSource {
+// Step 1 - Create a product interface
+public interface Datasource {
+    String read();
 
-    public String read();
-
-    public void write(String value);
+    void write(String value);
 }

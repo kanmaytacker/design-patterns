@@ -1,23 +1,9 @@
 package com.scaler.lld.design.structural.decorator;
 
-// Step 1 - Implement common interface
-public class BaseDecorator implements DataSource {
+import lombok.AllArgsConstructor;
 
-    // Step 2 - Accept current entity in constructor
-    public DataSource dataSource;
-
-    public BaseDecorator(DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
-
-    @Override
-    public String read() {
-        return dataSource.read();
-    }
-
-    @Override
-    public void write(String value) {
-        dataSource.write(value);
-    }
-
+// Step 3 - Base decorator
+@AllArgsConstructor
+public abstract class BaseDecorator implements Datasource {
+    protected Datasource nextLayer;
 }

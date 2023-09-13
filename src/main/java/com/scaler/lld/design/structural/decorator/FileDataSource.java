@@ -1,7 +1,7 @@
 package com.scaler.lld.design.structural.decorator;
 
-public class FileDataSource implements DataSource {
-
+// Step 2 - Concrete product class
+public class FileDatasource implements Datasource {
     @Override
     public String read() {
         return "Base";
@@ -9,7 +9,6 @@ public class FileDataSource implements DataSource {
 
     @Override
     public void write(String value) {
-        System.out.println(value);        
+        System.out.println(value);
     }
-
 }

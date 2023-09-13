@@ -1,32 +1,28 @@
 package com.scaler.lld.design.structural.decorator;
 
-// Step 1
-public class CompressionDecorator implements DataSource {
+public class CompressionDecorator extends BaseDecorator {
 
-    private DataSource dataSource;
-
-    public CompressionDecorator(DataSource dataSource) {
-        this.dataSource = dataSource;
+    public CompressionDecorator(Datasource datasource) {
+        super(datasource);
     }
 
     @Override
     public String read() {
-        String value = dataSource.read();
-        return decompress(value);
+        String compressed = nextLayer.read();
+        return decompress(compressed);
     }
 
-    private String decompress(String value) {
-        return value + " - Decompress";
+    private String decompress(String compressed) {
+        return compressed + " - Decompressed";
     }
 
     @Override
     public void write(String value) {
-        String compressedValue = compress(value);
-        dataSource.write(compressedValue);
+        String compressed = compress(value);
+        nextLayer.write(compressed);
     }
 
     private String compress(String value) {
-        return "Compressed";
+        return value + " - Compressed";
     }
-
 }
