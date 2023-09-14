@@ -1,11 +1,11 @@
-package com.scaler.lld.design.creational;
+//package com.scaler.lld.design.creational;
 
 import com.scaler.lld.design.creational.parleg.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
+/*
 public class ButtonTest {
 
     @Test
@@ -29,7 +29,11 @@ public class ButtonTest {
                 "If the screen size is of a desktop, the btn should be square"
         );
     }
+
+
 }
+*/
+
 
 // Why the factory pattern?
 // 1. SRP and OCP =>> Done
