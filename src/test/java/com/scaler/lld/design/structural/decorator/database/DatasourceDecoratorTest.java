@@ -1,4 +1,4 @@
-package com.scaler.lld.design.structural.decorator;
+package com.scaler.lld.design.structural.decorator.database;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DatasourceDecoratorTest {
 
-    DataSource dataSource = null;
+    Datasource dataSource = null;
 
     @BeforeEach
     public void setUp() {
-        dataSource = new FileDataSource();
+        dataSource = new FileDatasource();
     }
 
     @Test
@@ -23,25 +23,25 @@ public class DatasourceDecoratorTest {
 
     @Test
     public void testCompressionDecorator() {
-        DataSource compressedDataSource = new CompressionDecorator(dataSource);
-        assertEquals("Base - Decompress",
+        Datasource compressedDataSource = new CompressionDecorator(dataSource);
+        assertEquals("Base - Decompressed",
                 compressedDataSource.read(), "If compressed data source is used, it should return Decompress");
 
     }
 
     @Test
     public void testEncryptionDecorator() {
-        DataSource encryptedDataSource = new EncryptionDecorator(dataSource);
-        assertEquals( "Base - Decrypted",
+        Datasource encryptedDataSource = new EncryptionDecorator(dataSource);
+        assertEquals("Base - Decrypted",
                 encryptedDataSource.read(), "If encrypted data source is used, it should return Encrypted");
     }
 
     @Test
     public void testCompressionAndEncryptionDecorator() {
-        DataSource compressedDataSource = new CompressionDecorator(dataSource);
-        DataSource encryptedDataSource = new EncryptionDecorator(compressedDataSource);
+        Datasource compressedDataSource = new CompressionDecorator(dataSource);
+        Datasource encryptedDataSource = new EncryptionDecorator(compressedDataSource);
         assertEquals(
-                "Base - Decompress - Decrypted", encryptedDataSource.read(), "If compressed and encrypted data source is used, it should return Encrypted - Decompress");
+                "Base - Decompressed - Decrypted", encryptedDataSource.read(), "If compressed and encrypted data source is used, it should return Encrypted - Decompress");
     }
 
 }
