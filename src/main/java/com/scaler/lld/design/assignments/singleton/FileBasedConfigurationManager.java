@@ -7,8 +7,7 @@ import java.util.Properties;
 public abstract class FileBasedConfigurationManager {
 
     protected final Properties properties;
-
-    public FileBasedConfigurationManager() {
+    public  FileBasedConfigurationManager() {
         this.properties = new Properties();
     }
 
@@ -21,6 +20,7 @@ public abstract class FileBasedConfigurationManager {
     }
 
     public static FileBasedConfigurationManager getInstance() {
+
         throw new UnsupportedOperationException("Not implemented yet");
     }
 
@@ -46,6 +46,7 @@ public abstract class FileBasedConfigurationManager {
 
     protected <T> T convert(String value, Class<T> type) {
         System.out.println("Converting " + value + " to " + type.getSimpleName());
+        try{
         switch (type.getSimpleName()) {
             case "Integer":
                 return (T) Integer.valueOf(value);
@@ -55,6 +56,9 @@ public abstract class FileBasedConfigurationManager {
                 return (T) Float.valueOf(value);
             case "Double":
                 return (T) Double.valueOf(value);
+        }}
+        catch (Exception e){
+            return null;
         }
         throw new UnsupportedOperationException("Invalid type: " + type.getSimpleName());
     }
