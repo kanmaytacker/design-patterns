@@ -4,16 +4,18 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public abstract class FileBasedConfigurationManager {
+public abstract class
+FileBasedConfigurationManager {
 
     protected final Properties properties;
 
-    public FileBasedConfigurationManager() {
+    FileBasedConfigurationManager() {
         this.properties = new Properties();
     }
 
     public void load(String filePath) {
         try (FileInputStream fileInputStream = new FileInputStream(filePath)) {
+            System.out.println("Hello");
             properties.load(fileInputStream);
         } catch (IOException e) {
             throw new RuntimeException("Error while loading configuration file", e);
