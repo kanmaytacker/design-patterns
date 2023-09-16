@@ -14,40 +14,39 @@ public class DatabaseConfigurationBuilder {
         return new Builder();
     }
     public static class Builder {
-        private String databaseUrl;
-        private String username;
-        private String password;
-        private int maxConnections;
-        private boolean enableCache;
-        private boolean isReadOnly;
+        private DatabaseConfigurationBuilder databaseConfigurationBuilder;
+
+        private Builder() {
+            databaseConfigurationBuilder = new DatabaseConfigurationBuilder();
+        }
 
         public Builder databaseUrl(String databaseUrl) {
-            this.databaseUrl = databaseUrl;
+            this.databaseConfigurationBuilder.databaseUrl = databaseUrl;
             return this;
         }
 
         public Builder username(String username) {
-            this.username = username;
+            this.databaseConfigurationBuilder.username = username;
             return this;
         }
 
         public Builder password(String password) {
-            this.password = password;
+            this.databaseConfigurationBuilder.password = password;
             return this;
         }
 
         public Builder maxConnections(int maxConnections) {
-            this.maxConnections = maxConnections;
+            this.databaseConfigurationBuilder.maxConnections = maxConnections;
             return this;
         }
 
         public Builder enableCache(boolean enableCache) {
-            this.enableCache = enableCache;
+            this.databaseConfigurationBuilder.enableCache = enableCache;
             return this;
         }
 
         public Builder readOnly() {
-            isReadOnly = true;
+            databaseConfigurationBuilder.isReadOnly = true;
             return this;
         }
         public boolean isValid() {
@@ -55,12 +54,12 @@ public class DatabaseConfigurationBuilder {
         }
         public DatabaseConfigurationBuilder build() {
             DatabaseConfigurationBuilder instance = new DatabaseConfigurationBuilder();
-            instance.databaseUrl = databaseUrl;
-            instance.username = username;
-            instance.password = password;
-            instance.maxConnections = maxConnections;
-            instance.enableCache = enableCache;
-            instance.isReadOnly = isReadOnly;
+            instance.databaseUrl = databaseConfigurationBuilder.databaseUrl;
+            instance.username = databaseConfigurationBuilder.username;
+            instance.password = databaseConfigurationBuilder.password;
+            instance.maxConnections = databaseConfigurationBuilder.maxConnections;
+            instance.enableCache = databaseConfigurationBuilder.enableCache;
+            instance.isReadOnly = databaseConfigurationBuilder.isReadOnly;
             return instance;
         }
     }
