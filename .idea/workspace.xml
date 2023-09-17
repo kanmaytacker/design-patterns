@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09155895-1768-4da8-aa5a-b7d5320e3e62" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/lld/design/assignments/prototype/ConfigurationRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaler/lld/design/assignments/builder/DatabaseConfigurationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaler/lld/design/assignments/builder/DatabaseConfigurationBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaler/lld/design/assignments/prototype/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaler/lld/design/assignments/prototype/Configuration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +50,22 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.DatabaseConfigurationTest">
+  <component name="RunManager" selected="JUnit.ConfigurationTest">
+    <configuration name="ConfigurationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scaler-lld-design" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scaler.lld.design.assignments.prototype.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scaler.lld.design.assignments.prototype" />
+      <option name="MAIN_CLASS_NAME" value="com.scaler.lld.design.assignments.prototype.ConfigurationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DatabaseConfigurationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scaler-lld-design" />
       <extension name="coverage">
@@ -105,29 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileBasedConfigurationManagerTest.testGetConfigurationWithTypeConversion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="scaler-lld-design" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.scaler.lld.design.assignments.singleton.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.scaler.lld.design.assignments.singleton" />
-      <option name="MAIN_CLASS_NAME" value="com.scaler.lld.design.assignments.singleton.FileBasedConfigurationManagerTest" />
-      <option name="METHOD_NAME" value="testGetConfigurationWithTypeConversion" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConfigurationTest" />
         <item itemvalue="JUnit.DatabaseConfigurationTest" />
         <item itemvalue="JUnit.DatabaseConfigurationTest.testBuildMethodWithReferenceForSpecificFields" />
         <item itemvalue="JUnit.FileBasedConfigurationManagerTest" />
         <item itemvalue="JUnit.FileBasedConfigurationManagerTest.testClear" />
-        <item itemvalue="JUnit.FileBasedConfigurationManagerTest.testGetConfigurationWithTypeConversion" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +148,8 @@
       <updated>1694777010706</updated>
       <workItem from="1694777021913" duration="7820000" />
       <workItem from="1694792593277" duration="3996000" />
-      <workItem from="1694863108334" duration="355000" />
+      <workItem from="1694863108334" duration="964000" />
+      <workItem from="1694964214915" duration="1249000" />
     </task>
     <servers />
   </component>
