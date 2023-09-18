@@ -1,6 +1,6 @@
 package com.scaler.lld.design.assignments.builder;
 
-@WithBuilder
+//@WithBuilder
 public class DatabaseConfigurationBuilder {
 
 }
