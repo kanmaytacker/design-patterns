@@ -1,6 +1,7 @@
 package com.scaler.lld.design.assignments.prototype;
 
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ConfigurationRegister implements ConfigurationPrototypeRegistry{
@@ -18,6 +19,11 @@ public class ConfigurationRegister implements ConfigurationPrototypeRegistry{
 
     @Override
     public Configuration clone(ConfigurationType type) {
-        return register.get(type).cloneObject();
+        Optional<Configuration> maybeConfiguration = Optional.ofNullable(register.get(type));
+        if(maybeConfiguration.isPresent()) {
+            return register.get(type).cloneObject();
+        } else {
+            return null;
+        }
     }
 }

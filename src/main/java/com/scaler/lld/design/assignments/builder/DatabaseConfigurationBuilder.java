@@ -49,9 +49,7 @@ public class DatabaseConfigurationBuilder {
             databaseConfigurationBuilder.isReadOnly = true;
             return this;
         }
-        public boolean isValid() {
-            return true;
-        }
+
         public DatabaseConfigurationBuilder build() {
             DatabaseConfigurationBuilder instance = new DatabaseConfigurationBuilder();
             instance.databaseUrl = databaseConfigurationBuilder.databaseUrl;

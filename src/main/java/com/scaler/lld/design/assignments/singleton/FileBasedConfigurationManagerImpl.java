@@ -1,5 +1,9 @@
 package com.scaler.lld.design.assignments.singleton;
 
+import jdk.dynalink.Operation;
+
+import java.util.Optional;
+
 public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationManager {
 
     private static FileBasedConfigurationManager instance = null;
@@ -13,26 +17,11 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
 
     @Override
     public <T> T getConfiguration(String key, Class<T> type) {
-        String value = getProperties().getProperty(key);
-        if(value == null) {
-            return null;
-        }
-        if(type.isAssignableFrom(String.class)) {
-            return (T) value;
-        }
-        else if(type.isAssignableFrom(Integer.class)) {
-            return (T) Integer.valueOf(value);
-        }
-        else if(type.isAssignableFrom(Double.class)) {
-            return (T) Double.valueOf(value);
-        }
-        else if(type.isAssignableFrom(Float.class)) {
-            return (T) Float.valueOf(value);
-        }
-        else if(type.isAssignableFrom(Boolean.class)) {
-            return (T) Boolean.valueOf(value);
-        }
-        else {
+        Optional<String> maybeString = Optional.ofNullable(getProperties().getProperty(key));
+        if(maybeString.isPresent()) {
+            String value = getProperties().getProperty(key);
+            return convert(value, type);
+        } else {
             return null;
         }
     }
@@ -45,8 +34,8 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
     @Override
     public <T> void setConfiguration(String key, T value) {
         if(value instanceof String) {
-            String v = (String)value;
-            getProperties().setProperty(key, v);
+            String config = value.toString();
+            getProperties().setProperty(key, config);
         }
     }
 
