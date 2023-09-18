@@ -23,36 +23,43 @@ public class DatabaseConfigurationBuilder {
         public Builder() {
         }
 
-        public DatabaseConfiguration build() {
-            return new DatabaseConfiguration(databaseUrl, username, password, maxConnections, enableCache, isReadOnly);
+        public DatabaseConfigurationBuilder build() {
+            DatabaseConfigurationBuilder outerClassObj = new DatabaseConfigurationBuilder();
+            outerClassObj.databaseUrl = databaseUrl;
+            outerClassObj.username = username;
+            outerClassObj.password = password;
+            outerClassObj.maxConnections = maxConnections;
+            outerClassObj.enableCache = enableCache;
+            outerClassObj.isReadOnly = isReadOnly;
+            return outerClassObj;
         }
 
-        public Builder setDatabaseUrl(String databaseUrl) {
+        public Builder url(String databaseUrl) {
             this.databaseUrl = databaseUrl;
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = username;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setMaxConnections(int maxConnections) {
+        public Builder maxConnections(int maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
 
-        public Builder setEnableCache(boolean enableCache) {
+        public Builder enableCache(boolean enableCache) {
             this.enableCache = enableCache;
             return this;
         }
 
-        public Builder setReadOnly(boolean readOnly) {
+        public Builder readOnly(boolean readOnly) {
             isReadOnly = readOnly;
             return this;
         }

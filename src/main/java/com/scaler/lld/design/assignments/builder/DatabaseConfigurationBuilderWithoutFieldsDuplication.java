@@ -1,6 +1,6 @@
 package com.scaler.lld.design.assignments.builder;
 
-@WithBuilder
+//@WithBuilder
 public class DatabaseConfigurationBuilderWithoutFieldsDuplication {
     private String databaseUrl;
     private String username;
@@ -18,38 +18,44 @@ public class DatabaseConfigurationBuilderWithoutFieldsDuplication {
             instance = new DatabaseConfigurationBuilderWithoutFieldsDuplication();
         }
 
-        public DatabaseConfiguration build() {
+        public DatabaseConfigurationBuilderWithoutFieldsDuplication build() {
             //return new object instead of "instance" variable due to immutability advantage.
-            return new DatabaseConfiguration(instance.databaseUrl, instance.username, instance.password,
-                    instance.maxConnections, instance.enableCache, instance.isReadOnly);
+            DatabaseConfigurationBuilderWithoutFieldsDuplication outerClassObj = new DatabaseConfigurationBuilderWithoutFieldsDuplication();
+            outerClassObj.databaseUrl = instance.databaseUrl;
+            outerClassObj.username = instance.username;
+            outerClassObj.password = instance.password;
+            outerClassObj.maxConnections = instance.maxConnections;;
+            outerClassObj.enableCache = instance.enableCache;
+            outerClassObj.isReadOnly = instance.isReadOnly;
+            return outerClassObj;
         }
 
-        public Builder setDatabaseUrl(String databaseUrl) {
+        public Builder url(String databaseUrl) {
             instance.databaseUrl = databaseUrl;
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             instance.username = username;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             instance.password = password;
             return this;
         }
 
-        public Builder setMaxConnections(int maxConnections) {
+        public Builder maxConnections(int maxConnections) {
             instance.maxConnections = maxConnections;
             return this;
         }
 
-        public Builder setEnableCache(boolean enableCache) {
+        public Builder enableCache(boolean enableCache) {
             instance.enableCache = enableCache;
             return this;
         }
 
-        public Builder setReadOnly(boolean readOnly) {
+        public Builder readOnly(boolean readOnly) {
             instance.isReadOnly = readOnly;
             return this;
         }
