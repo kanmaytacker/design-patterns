@@ -1,5 +1,7 @@
 package com.scaler.lld.design.assignments.singleton;
 
+import java.util.Optional;
+
 public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationManager {
 
     private static  FileBasedConfigurationManagerImpl INSTANCE = null;
@@ -15,7 +17,7 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
 
     @Override
     public <T> T getConfiguration(String key, Class<T> type) {
-        return convert(properties.getProperty(key), type);
+       return  convert(properties.getProperty(key), type);
     }
 
     @Override

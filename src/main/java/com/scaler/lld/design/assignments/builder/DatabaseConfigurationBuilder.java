@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @WithBuilder
-
+@Getter
 public class DatabaseConfigurationBuilder {
 
     private String databaseUrl;
@@ -14,29 +14,6 @@ public class DatabaseConfigurationBuilder {
     private boolean enableCache;
     private boolean isReadOnly;
 
-    public String getDatabaseUrl() {
-        return databaseUrl;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public int getMaxConnections() {
-        return maxConnections;
-    }
-
-    public boolean isEnableCache() {
-        return enableCache;
-    }
-
-    public boolean isReadOnly() {
-        return isReadOnly;
-    }
 
     private DatabaseConfigurationBuilder(String databaseUrl, String username, String password, int maxConnections, boolean enableCache, boolean isReadOnly) {
             this.databaseUrl = databaseUrl;
@@ -62,28 +39,36 @@ public class DatabaseConfigurationBuilder {
         private boolean enableCache;
         private boolean isReadOnly;
 
-        public void setDatabaseUrl(String databaseUrl) {
+
+
+        public Builder setDatabaseUrl(String databaseUrl) {
             this.databaseUrl = databaseUrl;
+            return this;
         }
 
-        public void setUsername(String username) {
+        public Builder setUsername(String username) {
             this.username = username;
+            return this;
         }
 
-        public void setPassword(String password) {
+        public Builder setPassword(String password) {
             this.password = password;
+            return this;
         }
 
-        public void setMaxConnections(int maxConnections) {
+        public Builder setMaxConnections(int maxConnections) {
             this.maxConnections = maxConnections;
+            return this;
         }
 
-        public void setEnableCache(boolean enableCache) {
+        public Builder setEnableCache(boolean enableCache) {
             this.enableCache = enableCache;
+            return this;
         }
 
-        public void setReadOnly(boolean readOnly) {
+        public Builder setReadOnly(boolean readOnly) {
             isReadOnly = readOnly;
+            return this;
         }
 
         public DatabaseConfigurationBuilder build(){

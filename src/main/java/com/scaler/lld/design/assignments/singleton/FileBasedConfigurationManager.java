@@ -46,7 +46,9 @@ public abstract class FileBasedConfigurationManager {
 
     protected <T> T convert(String value, Class<T> type) {
         System.out.println("Converting " + value + " to " + type.getSimpleName());
-        try{
+        if(value==null){
+            return null;
+        }
         switch (type.getSimpleName()) {
             case "Integer":
                 return (T) Integer.valueOf(value);
@@ -56,10 +58,8 @@ public abstract class FileBasedConfigurationManager {
                 return (T) Float.valueOf(value);
             case "Double":
                 return (T) Double.valueOf(value);
-        }}
-        catch (Exception e){
-            return null;
         }
+
         throw new UnsupportedOperationException("Invalid type: " + type.getSimpleName());
     }
 
