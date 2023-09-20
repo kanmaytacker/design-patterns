@@ -1,5 +1,7 @@
 package com.scaler.lld.design.assignments.builder;
 
+import java.util.Objects;
+
 @WithBuilder
 public class DatabaseConfigurationBuilder {
     private String databaseUrl;

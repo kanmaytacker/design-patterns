@@ -27,6 +27,7 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
 
     @Override
     public void setConfiguration(String key, String value) {
+
         // TODO Auto-generated method stub
         this.properties.setProperty(key, value);
     }
@@ -35,23 +36,29 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
     public <T> void setConfiguration(String key, T value) {
         // TODO Auto-generated method stub
         this.properties.setProperty(key, String.valueOf(value));
+
     }
 
     @Override
     public void removeConfiguration(String key) {
+
         // TODO Auto-generated method stub
         this.properties.remove(key);
+
     }
 
     @Override
     public void clear() {
         // TODO Auto-generated method stub
         this.properties.clear();
+
     }
 
     public static FileBasedConfigurationManager getInstance() {
         // TODO Auto-generated method stub
+
         if (INSTANCE == null) {
+
             synchronized (FileBasedConfigurationManagerImpl.class) {
                 if (INSTANCE == null) {
                     INSTANCE = new FileBasedConfigurationManagerImpl();
@@ -61,7 +68,8 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
         return INSTANCE;
     }
 
-    public static void resetInstance() {
+
+    public static void resetInstance(){
         // TODO Auto-generated method stub
         INSTANCE = null;
     }
