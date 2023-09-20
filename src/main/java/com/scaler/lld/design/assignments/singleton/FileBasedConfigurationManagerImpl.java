@@ -6,16 +6,18 @@ import java.util.Map;
 public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationManager {
 
     private static FileBasedConfigurationManager INSTANCE = null;
-    public Map<String, String> config = new HashMap<>();
+//    public Map<String, String> config = new HashMap<>();
 //    public Map<String, > configDiffType = new HashMap<>();
+
+    private FileBasedConfigurationManagerImpl(){}
 
     @Override
     public String getConfiguration(String key) {
 //        // TODO Auto-generated method stub
 //        throw new UnsupportedOperationException("Unimplemented method 'getConfiguration'");
-        String rvalue = "stringValue";
-        if (config.containsKey(key)){
-            rvalue = config.get(key);
+        String rvalue = null;
+        if (properties.containsKey(key)){
+            rvalue = (String) properties.get(key);
         }
         return rvalue;
     }
@@ -23,14 +25,20 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
     @Override
     public <T> T getConfiguration(String key, Class<T> type) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getConfiguration'");
+//        throw new UnsupportedOperationException("Unimplemented method 'getConfiguration'");
+        T rValue = null;
+        if (properties.containsKey(key)){
+            String value =  (String) properties.get(key);
+            rValue = (T) convert(value, type);
+        }
+        return rValue;
     }
 
     @Override
     public void setConfiguration(String key, String value) {
 //        // TODO Auto-generated method stub
 //        throw new UnsupportedOperationException("Unimplemented method 'setConfiguration'");
-        config.put(key, value);
+        properties.put(key, value);
     }
 
     @Override
@@ -44,14 +52,14 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
     public void removeConfiguration(String key) {
 //        // TODO Auto-generated method stub
 //        throw new UnsupportedOperationException("Unimplemented method 'removeConfiguration'");
-        config.put(key, null);
+        properties.remove(key);
     }
 
     @Override
     public void clear() {
 //        // TODO Auto-generated method stub
 //        throw new UnsupportedOperationException("Unimplemented method 'clear'");
-        config.clear();
+        properties.clear();
     }
 
     public static FileBasedConfigurationManager getInstance() {
