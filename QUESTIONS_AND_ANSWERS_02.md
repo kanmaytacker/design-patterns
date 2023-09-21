@@ -35,30 +35,48 @@
 - [ ] C. Decorator
 - [ ] D. Observer
 
-7. Joe Bloggs is developing a software application for data analysis. The application involves data collection, preprocessing, analysis algorithms, and visualization. The interactions between these components can become complex. Joe wants to provide a simplified interface for data analysts to perform end-to-end analysis tasks without dealing with the inner workings of each component. Which design pattern is suitable for this scenario?
+6. Joe Bloggs is developing a software application for data analysis. The application involves data collection, preprocessing, analysis algorithms, and visualization. The interactions between these components can become complex. Joe wants to provide a simplified interface for data analysts to perform end-to-end analysis tasks without dealing with the inner workings of each component. Which design pattern is suitable for this scenario?
 
 - [ ] A. Strategy
 - [ ] B. Adapter
 - [ ] C. Facade
 - [ ] D. Observer
 
-8. Joe Bloggs is building a task management application. Users can create tasks and assign them to different team members. Joe wants to implement a feature where team members receive notifications whenever they are assigned a new task or when the due date of a task is approaching. The notifications should be sent through various communication channels, such as in-app alerts, emails, and Slack messages. Which design pattern can Joe use to implement this real-time task notification system?
+7. Joe Bloggs is building a task management application. Users can create tasks and assign them to different team members. Joe wants to implement a feature where team members receive notifications whenever they are assigned a new task or when the due date of a task is approaching. The notifications should be sent through various communication channels, such as in-app alerts, emails, and Slack messages. Which design pattern can Joe use to implement this real-time task notification system?
 
 - [ ] A. Observer
 - [ ] B. Adapter
 - [ ] C. Facade
 - [ ] D. Strategy
 
-9. Joe Bloggs is developing a logging module for a large application. The logging module needs to maintain a single log file throughout the application's execution to avoid file access conflicts and ensure consistency. Which design pattern is suitable for this scenario?
+8. Joe Bloggs is developing a logging module for a large application. The logging module needs to maintain a single log file throughout the application's execution to avoid file access conflicts and ensure consistency. Which design pattern is suitable for this scenario?
 
 - [ ] A. Singleton
 - [ ] B. Factory
 - [ ] C. Prototype
 - [ ] D. Builder
 
-10. Joe Bloggs is working on testing a user API for a social media platform. Each test case requires generating multiple mock users with different attributes to simulate various scenarios. However, calling the API to create each mock user is time-consuming and inefficient. To optimize the user creation process during testing, which design pattern can Joe use?
+9. Joe Bloggs is working on testing a user API for a social media platform. Each test case requires generating multiple mock users with different attributes to simulate various scenarios. However, calling the API to create each mock user is time-consuming and inefficient. To optimize the user creation process during testing, which design pattern can Joe use?
 
 - [ ] A. Singleton
 - [ ] B. Factory
 - [ ] C. Prototype
 - [ ] D. Builder
+
+10. Joe Bloggs is developing a messaging application with support for various message types, including text, images, audio, and video. Each message type can have additional attributes and settings, such as delivery status and timestamps. The current approach of creating message objects using multiple overloaded constructors has become error-prone and challenging to maintain. What design pattern can Joe use to streamline the creation of message objects with different configurations?
+
+---
+
+## Answers
+
+1. B (Strategy)
+2. C (Flyweight)
+3. A (Decorator)
+4. B (Factory)
+5. A (Adapter)
+6. C (Facade)
+7. A (Observer)
+8. A (Singleton)
+9. C (Prototype)
+10. D (Builder)
+   
