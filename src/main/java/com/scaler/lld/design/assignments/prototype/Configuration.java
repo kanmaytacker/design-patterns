@@ -1,6 +1,7 @@
 package com.scaler.lld.design.assignments.prototype;
+import java.io.ObjectInputFilter;
 
-public class Configuration {
+public class Configuration implements ClonableObject<Configuration>{
     private String themeColor;
     private Boolean autoSave;
     private String language;
@@ -17,6 +18,15 @@ public class Configuration {
         this.fontSize = fontSize;
         this.fontFamily = fontFamily;
         this.type = type;
+    }
+    private Configuration(Configuration obj){
+        this.themeColor=obj.themeColor;
+        this.autoSave=obj.autoSave;
+        this.language=obj.language;
+        this.darkMode=obj.darkMode;
+        this.fontSize= obj.fontSize;
+        this.type=obj.type;
+        this.fontFamily=obj.fontFamily;
     }
 
     public String getThemeColor() {
@@ -45,5 +55,10 @@ public class Configuration {
 
     public ConfigurationType getType() {
         return type;
+    }
+
+    @Override
+    public Configuration cloneObject() {
+        return new Configuration(this);
     }
 }
