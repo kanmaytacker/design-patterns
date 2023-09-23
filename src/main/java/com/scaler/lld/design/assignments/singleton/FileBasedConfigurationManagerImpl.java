@@ -1,7 +1,14 @@
 package com.scaler.lld.design.assignments.singleton;
 
-public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationManager {
+import java.util.Optional;
 
+public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationManager {
+    private static FileBasedConfigurationManagerImpl INSTANCE;
+
+    //step1: private constructor
+    private FileBasedConfigurationManagerImpl(){
+
+    }
     @Override
     public String getConfiguration(String key) {
         // TODO Auto-generated method stub
@@ -12,11 +19,10 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
     public <T> T getConfiguration(String key, Class<T> type) {
         // TODO Auto-generated method stub
         if(INSTANCE!=null){
-            String str=INSTANCE.properties.getProperty(key);
-            if(str!=null)
-                return convert(str,type);
-            else
-                return null;
+            String str=this.properties.getProperty(key);
+            return Optional.ofNullable(str)
+                    .map(s -> convert(s, type))
+                    .orElse(null);
         }
         else{
             throw new NullPointerException("Configuration Manager Instance is NULL");
@@ -47,13 +53,6 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
         properties.clear();
     }
 
-
-    private static FileBasedConfigurationManagerImpl INSTANCE;
-
-    //step1: private constructor
-    private FileBasedConfigurationManagerImpl(){
-
-    }
     public static FileBasedConfigurationManager getInstance() {
         // TODO Auto-generated method stub
         if(INSTANCE==null){
