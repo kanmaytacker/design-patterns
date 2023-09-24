@@ -63,6 +63,7 @@ public class FileBasedConfigurationManagerImpl extends FileBasedConfigurationMan
 
     public static void resetInstance() {
         fileBasedConfigurationManager=null;
+        //test changes
     }
 
 }
