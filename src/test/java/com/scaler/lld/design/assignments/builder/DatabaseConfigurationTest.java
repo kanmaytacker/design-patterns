@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class DatabaseConfigurationTest {
 
     private static final Class<?> originalClass = DatabaseConfiguration.class;

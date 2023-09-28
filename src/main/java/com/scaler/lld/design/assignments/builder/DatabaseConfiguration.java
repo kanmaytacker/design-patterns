@@ -1,5 +1,8 @@
 package com.scaler.lld.design.assignments.builder;
 
+
+
+
 public class DatabaseConfiguration {
 
     private String databaseUrl;
@@ -9,16 +12,10 @@ public class DatabaseConfiguration {
     private boolean enableCache;
     private boolean isReadOnly;
 
-    public DatabaseConfiguration(String databaseUrl, String username, String password, int maxConnections, boolean enableCache, boolean isReadOnly) {
-        this.databaseUrl = databaseUrl;
-        this.username = username;
-        this.password = password;
-        this.maxConnections = maxConnections;
-        this.enableCache = enableCache;
-        this.isReadOnly = isReadOnly;
+    private DatabaseConfiguration(){
     }
 
-    public String getDatabaseUrl() {
+    /*public String getDatabaseUrl() {
         return databaseUrl;
     }
 
@@ -40,5 +37,12 @@ public class DatabaseConfiguration {
 
     public boolean isReadOnly() {
         return isReadOnly;
-    }
+    }*/
+
+
+
+
+
+
+
 }
