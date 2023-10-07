@@ -1,0 +1,4 @@
+package com.scaler.lld.design.assignments.abstractfactory;
+
+public class FLACAudioFactory {
+}
