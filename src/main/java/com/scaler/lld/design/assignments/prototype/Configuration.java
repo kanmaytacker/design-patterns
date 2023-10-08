@@ -1,49 +1,38 @@
 package com.scaler.lld.design.assignments.prototype;
 
-public class Configuration {
-    private String themeColor;
-    private Boolean autoSave;
-    private String language;
-    private Boolean darkMode;
-    private Integer fontSize;
-    private String fontFamily;
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class Configuration implements  Configurable{
+    private String configId;
+    private Boolean configName;
+    private String configValue;
+    private Boolean isEnabled;
     private ConfigurationType type;
 
-    public Configuration(String themeColor, Boolean autoSave, String language, Boolean darkMode, Integer fontSize, String fontFamily, ConfigurationType type) {
-        this.themeColor = themeColor;
-        this.autoSave = autoSave;
-        this.language = language;
-        this.darkMode = darkMode;
-        this.fontSize = fontSize;
-        this.fontFamily = fontFamily;
-        this.type = type;
+    public String getConfigId() {
+        return configId;
     }
 
-    public String getThemeColor() {
-        return themeColor;
+    public Boolean getConfigName() {
+        return configName;
     }
 
-    public Boolean getAutoSave() {
-        return autoSave;
+    public String getConfigValue() {
+        return configValue;
     }
 
-    public String getLanguage() {
-        return language;
-    }
-
-    public Boolean getDarkMode() {
-        return darkMode;
-    }
-
-    public Integer getFontSize() {
-        return fontSize;
-    }
-
-    public String getFontFamily() {
-        return fontFamily;
+    public Boolean getEnabled() {
+        return isEnabled;
     }
 
     public ConfigurationType getType() {
         return type;
     }
+
+    @Override
+    public Configuration cloneObject() {
+        return new Configuration(configId,configName,configValue,isEnabled,type);
+    }
 }
+

@@ -20,7 +20,7 @@ public class ConfigurationTest {
         boolean implementsClonableObject = false;
 
         for (Class<?> iface : interfaces) {
-            if (iface == ClonableObject.class) {
+            if (iface == Configurable.class) {
                 implementsClonableObject = true;
                 break;
             }
@@ -31,7 +31,7 @@ public class ConfigurationTest {
 
     @Test
     public void testConfigurationCloneMethodCreatesDistinctObject() {
-        Configuration configuration = new Configuration("Black", true, "English", true, 12, "Arial", ConfigurationType.BASIC);
+        Configuration configuration = new Configuration("Black", true, "English", true,  ConfigurationType.BASIC);
 
         // Using reflection to find and invoke the clone method
         try {
@@ -46,12 +46,10 @@ public class ConfigurationTest {
             assertNotSame(configuration, clonedConfiguration, "If the clone method is implemented correctly, it should return a new object");
 
             // Asserting that the cloned configuration has the same values as the original configuration
-            assertEquals(configuration.getThemeColor(), clonedConfiguration.getThemeColor(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
-            assertEquals(configuration.getAutoSave(), clonedConfiguration.getAutoSave(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
-            assertEquals(configuration.getFontSize(), clonedConfiguration.getFontSize(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
-            assertEquals(configuration.getDarkMode(), clonedConfiguration.getDarkMode(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
-            assertEquals(configuration.getLanguage(), clonedConfiguration.getLanguage(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
-            assertEquals(configuration.getFontFamily(), clonedConfiguration.getFontFamily(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
+            assertEquals(configuration.getConfigId(), clonedConfiguration.getConfigId(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
+            assertEquals(configuration.getConfigName(), clonedConfiguration.getConfigName(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
+            assertEquals(configuration.getConfigValue(), clonedConfiguration.getConfigValue(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
+            assertEquals(configuration.getEnabled(), clonedConfiguration.getEnabled(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
             assertEquals(configuration.getType(), clonedConfiguration.getType(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
         } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
             fail("If the prototype pattern is implemented correctly, the Configuration class should have a cloneObject method");
@@ -64,7 +62,7 @@ public class ConfigurationTest {
         ConfigurationPrototypeRegistry registry = getRegistry();
         assertNotNull(registry, "If the registry pattern is implemented correctly, the registry should not be null");
 
-        Configuration configuration = new Configuration("Black", true, "English", true, 12, "Arial", ConfigurationType.BASIC);
+        Configuration configuration = new Configuration("Black", true, "English", true,  ConfigurationType.BASIC);
         registry.addPrototype(configuration);
 
         Configuration prototype = registry.getPrototype(configuration.getType());
@@ -94,7 +92,7 @@ public class ConfigurationTest {
     @Test
     public void testRegistryClone() {
 
-        Configuration configuration = new Configuration("Black", true, "English", true, 12, "Arial", ConfigurationType.BASIC);
+        Configuration configuration = new Configuration("Black", true, "English", true, ConfigurationType.BASIC);
         ConfigurationPrototypeRegistry registry = getRegistry();
         assertNotNull(registry, "If the registry pattern is implemented correctly, the registry should not be null");
 
@@ -105,12 +103,10 @@ public class ConfigurationTest {
         assertNotNull(clonedConfiguration, "If the clone method is implemented correctly, it should return a non-null object");
         assertNotSame(configuration, clonedConfiguration, "If the clone method is implemented correctly, it should return a new object");
 
-        assertEquals(configuration.getThemeColor(), clonedConfiguration.getThemeColor(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
-        assertEquals(configuration.getAutoSave(), clonedConfiguration.getAutoSave(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
-        assertEquals(configuration.getFontSize(), clonedConfiguration.getFontSize(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
-        assertEquals(configuration.getDarkMode(), clonedConfiguration.getDarkMode(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
-        assertEquals(configuration.getLanguage(), clonedConfiguration.getLanguage(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
-        assertEquals(configuration.getFontFamily(), clonedConfiguration.getFontFamily(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
+        assertEquals(configuration.getConfigId(), clonedConfiguration.getConfigId(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
+        assertEquals(configuration.getConfigName(), clonedConfiguration.getConfigName(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
+        assertEquals(configuration.getConfigValue(), clonedConfiguration.getConfigValue(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
+        assertEquals(configuration.getEnabled(), clonedConfiguration.getEnabled(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
         assertEquals(configuration.getType(), clonedConfiguration.getType(), "If the clone method is implemented correctly, it should return a new object with the same values as the original object");
     }
 }
