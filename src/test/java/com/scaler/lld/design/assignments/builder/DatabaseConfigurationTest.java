@@ -151,7 +151,7 @@ public class DatabaseConfigurationTest {
                 assertEquals(builderField.get(builderInstance), originalField.get(builtInstance), "If the builder pattern is implemented, the build method should copy the values from the builder to the outer class");
             }
         } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException |
-                 ClassNotFoundException | NoSuchFieldException e) {
+                ClassNotFoundException | NoSuchFieldException e) {
             e.printStackTrace();
             fail("An error occurred while testing the build method: " + e.getMessage());
         }
@@ -207,11 +207,9 @@ public class DatabaseConfigurationTest {
                 assertEquals(builderField.get(referenceInstance), originalField.get(builtInstance), "If the builder pattern is implemented with a reference, the build method should copy the values from the reference to the outer class");
             }
         } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException |
-                 ClassNotFoundException | NoSuchFieldException e) {
+                ClassNotFoundException | NoSuchFieldException e) {
             e.printStackTrace();
             fail("An error occurred while testing the build method: " + e.getMessage());
         }
     }
-
-
 }
