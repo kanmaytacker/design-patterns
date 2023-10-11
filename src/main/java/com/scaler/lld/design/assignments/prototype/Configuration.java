@@ -1,6 +1,11 @@
 package com.scaler.lld.design.assignments.prototype;
 
-public class Configuration {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+// Step 2: implement clone method
+@Getter
+public class Configuration implements ClonableObject<Configuration>{
     private String themeColor;
     private Boolean autoSave;
     private String language;
@@ -19,31 +24,8 @@ public class Configuration {
         this.type = type;
     }
 
-    public String getThemeColor() {
-        return themeColor;
-    }
-
-    public Boolean getAutoSave() {
-        return autoSave;
-    }
-
-    public String getLanguage() {
-        return language;
-    }
-
-    public Boolean getDarkMode() {
-        return darkMode;
-    }
-
-    public Integer getFontSize() {
-        return fontSize;
-    }
-
-    public String getFontFamily() {
-        return fontFamily;
-    }
-
-    public ConfigurationType getType() {
-        return type;
+    @Override
+    public Configuration cloneObject() {
+        return new Configuration(this.themeColor, this.autoSave, this.language, this.darkMode, this.fontSize, this.fontFamily, this.type);
     }
 }
