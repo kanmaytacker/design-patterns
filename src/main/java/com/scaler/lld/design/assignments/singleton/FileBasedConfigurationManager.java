@@ -12,6 +12,7 @@ public abstract class FileBasedConfigurationManager {
         this.properties = new Properties();
     }
 
+
     public void load(String filePath) {
         try (FileInputStream fileInputStream = new FileInputStream(filePath)) {
             properties.load(fileInputStream);
