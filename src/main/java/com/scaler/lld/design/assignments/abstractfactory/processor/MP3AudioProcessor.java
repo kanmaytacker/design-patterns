@@ -4,7 +4,6 @@ package com.scaler.lld.design.assignments.abstractfactory.processor;
 import com.scaler.lld.design.assignments.abstractfactory.MediaFormat;
 
 public class MP3AudioProcessor extends AudioProcessor {
-
     public MP3AudioProcessor(byte[] audioData) {
         super(audioData);
     }
