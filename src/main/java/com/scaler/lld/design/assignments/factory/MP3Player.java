@@ -1,12 +1,11 @@
 package com.scaler.lld.design.assignments.factory;
 
-public class MP3Player {
+public class MP3Player extends AudioPlayer {
     private int volume;
     private double playBackRate;
 
     public MP3Player(int volume, double playBackRate) {
-        this.volume = volume;
-        this.playBackRate = playBackRate;
+       super(volume, playBackRate);
     }
 
     public void play() {

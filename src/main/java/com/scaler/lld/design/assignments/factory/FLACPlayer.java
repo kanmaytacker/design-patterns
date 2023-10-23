@@ -1,12 +1,11 @@
 package com.scaler.lld.design.assignments.factory;
 
-public class FLACPlayer {
+public class FLACPlayer extends AudioPlayer {
     private int volume;
     private double playBackRate;
 
     public FLACPlayer(int volume, double playBackRate) {
-        this.volume = volume;
-        this.playBackRate = playBackRate;
+        super(volume, playBackRate);
     }
 
     public void play() {
