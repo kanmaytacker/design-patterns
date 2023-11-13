@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2c0f46a-1888-423b-9b08-5345465d9591" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/main/com/scaler/lld/design/assignments/builder/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/main/com/scaler/lld/design/assignments/prototype/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/main/com/scaler/lld/design/assignments/singleton/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/lld/design/assignments/singleton/MyConfigurationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/lld/design/assignments/singleton/database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scaler/lld/design/assignments/singleton/FileBasedConfigurationManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scaler/lld/design/assignments/singleton/FileBasedConfigurationManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +98,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -124,7 +111,7 @@
       <recent name="com.bookmyshow.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FileBasedConfigurationManagerTest">
+  <component name="RunManager" selected="JUnit.FileBasedConfigurationManagerTest.testSingletonBehavior">
     <configuration name="All in test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <option name="PACKAGE_NAME" value="" />
@@ -156,8 +143,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileBasedConfigurationManagerTest.testSingletonBehavior" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scaler.lld.design.assignments.singleton.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scaler.lld.design.assignments.singleton" />
+      <option name="MAIN_CLASS_NAME" value="com.scaler.lld.design.assignments.singleton.FileBasedConfigurationManagerTest" />
+      <option name="METHOD_NAME" value="testSingletonBehavior" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileBasedConfigurationManagerTest.testSingletonBehavior" />
         <item itemvalue="JUnit.FileBasedConfigurationManagerTest" />
         <item itemvalue="JUnit.All in test (1)" />
         <item itemvalue="JUnit.All in test" />
@@ -180,7 +184,8 @@
       <workItem from="1699125151677" duration="58000" />
       <workItem from="1699462779035" duration="3469000" />
       <workItem from="1699468722472" duration="2318000" />
-      <workItem from="1699674427939" duration="4000" />
+      <workItem from="1699674427939" duration="3940000" />
+      <workItem from="1699860243846" duration="4000" />
     </task>
     <servers />
   </component>
