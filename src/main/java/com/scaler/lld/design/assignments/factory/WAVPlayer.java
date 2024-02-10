@@ -1,6 +1,6 @@
 package com.scaler.lld.design.assignments.factory;
 
-public class WAVPlayer {
+public class WAVPlayer extends AudioPlayer{
     private int volume;
     private double playBackRate;
 
