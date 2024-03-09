@@ -111,7 +111,7 @@ public class Database {
 
 ### Double-checked locking
 
-The above code is thread-safe. However, it is not efficient. If two threads call the getInstance() method at the same time, both threads will check if the instance variable is null. Both threads will find that the instance variable is null. Both threads will wait for the lock to be released. Once the lock is released, one thread will create a new instance of the Database class. The other thread will wait for the lock to be released. Once the lock is released, it will create a new instance of the Database class. This will result in two instances of the Database class. To make the above code efficient, we can use double-checked locking.
+The above code is thread-safe. However, it is not Efficient. If a database instance has been created, and two threads try to access it, only one thread can call getInstance method, and the other must wait until the lock is released. To make the above code efficient, we can use double-checked locking.
 
 ```java
 public class Database {
