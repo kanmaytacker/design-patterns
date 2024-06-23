@@ -146,8 +146,9 @@ public class BitcoinPoller {
         Bitcoin currentBitcoin = bitcoinTracker.getBitcoin();
         if (currentBitcoin.getPrice() != previousBitcoin.getPrice()) {
             sendEmail();
+            this.previousBitcoin = currentBitcoin;
         }
-        this.previousBitcoin = currentBitcoin;
+        
     }
 }
 ```
