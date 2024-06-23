@@ -158,7 +158,7 @@ The two approaches we have discussed so far are not ideal. The first approach vi
 1. `Observable interface` - This interface defines the methods that the subject class must implement. The subject class is responsible for notifying the observers when the state of the subject changes.
 
 ```java
-public interface class Observable {
+public interface Observable {
     void addObserver(Observer observer);
     void removeObserver(Observer observer);
     void notifyObservers();
